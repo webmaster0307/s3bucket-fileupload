@@ -1,0 +1,12 @@
+{
+	"aws":{
+			"region" : "your - zone", // us-west-2
+			"accessKeyId" : "accessKey from s3", // like - AKIAJSKJRYU5XUSDLGMQ
+			"secretAccessKey" : "your access Secret Access Key" // like - Hpcn3elyn3mkN4v9+W+ngf2mebn3zQLMr5H3urRH
+	},
+	"s3":{
+			"Bucket": "your s3 BucketName ", // like - myimagesbucket
+			"ACL":"public-read" // the public-read means your bucket Images or content is publicly available to access via URLS
+	},
+	"port":5600
+}

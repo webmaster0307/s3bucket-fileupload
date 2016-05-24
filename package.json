@@ -1,0 +1,22 @@
+{
+  "name": "Node_Upload_To_S3",
+  "version":"0.0.1",
+  "description":"Upload Image from Mobile to here & redirect to s3 bucket",
+  "keywords": ["S3","aws-sdk","File Upload","S3Bucket"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dpz3579/s3_bucket_imageUpload.git"
+  },
+  "homepage": "https://github.com/dpz3579",
+  "author": "Dipesh Sharma <dipesh357@hotmail.com>",
+  "dependencies": {
+    "fs": "*",
+    "http": "*",
+    "path": "*",
+    "aws-sdk":"*",
+    "underscore": "*"
+  },
+  "main": "app.js",
+  "license": "UNLICENSED",
+  "private": true
+}
