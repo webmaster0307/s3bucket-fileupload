@@ -1,10 +1,10 @@
-var AWS = require('aws-sdk');
-var http = require('http');
-var fs = require('fs');
-var url = require('url');
-var _ = require('underscore');
-var fs = require('fs');
-var zlib = require('zlib');
+var AWS = require('aws-sdk'),
+    http = require('http'),
+    fs = require('fs'),
+    url = require('url'),
+    _ = require('underscore'),
+    fs = require('fs');
+
 var awsConfig = require('./config.json');
 
 // console.dir(awsConfig.aws);
@@ -36,7 +36,7 @@ var s3 = new AWS.S3();
         "file":profile_path+"prescriptions/"+query.imagename,
         "imagename":query.imagename
       };
-      var params = awsConfig.s3; // s3 bucket configuration
+      params = _.clone(awsConfig.s3_config); // s3 bucket configuration
       console.log("resp > "+JSON.stringify(respdata));
       var body = fs.createReadStream(query.imagename);
       params.Key = query.imagename;
