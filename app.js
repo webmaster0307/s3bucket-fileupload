@@ -11,11 +11,7 @@ var awsConfig = require('./config.json');
 // console.dir(awsConfig.s3);
 
 AWS.config.update(awsConfig.aws); // the configuration in config.json File
-
-var params = awsConfig.s3; // s3 bucket configuration
-
 var return_image_path = "https://s3-us-west-2.amazonaws.com/myimagebucket/"; // change this as this url will be send to your mobile device stating that the image is uploaded at this URL
-
 
 http.createServer(function(request,response){
 var s3 = new AWS.S3();
@@ -40,6 +36,7 @@ var s3 = new AWS.S3();
         "file":profile_path+"prescriptions/"+query.imagename,
         "imagename":query.imagename
       };
+      var params = awsConfig.s3; // s3 bucket configuration
       console.log("resp > "+JSON.stringify(respdata));
       var body = fs.createReadStream(query.imagename);
       params.Key = query.imagename;
